@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="main.css" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Age calculator app</title>
+
+    <script src="main.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="form">
+        <form>
+          <fieldset>
+            <div>
+              <label for="day">DAY</label>
+              <input
+                title="Must be a valid day"
+                pattern="[0-9]{2c}"
+                id="day"
+                type="number"
+              />
+              <span class="err-messages day-err"></span>
+            </div>
+            <div>
+              <label for="month">MONTH</label>
+              <input id="month" type="number" />
+              <span class="err-messages month-err"></span>
+            </div>
+            <div>
+              <label for="year">YEAR</label>
+              <input id="year" type="number" />
+              <span class="err-messages year-err"></span>
+            </div>
+          </fieldset>
+          <button class="button">
+            <img src="assets/images/icon-arrow.svg" alt="arrow button" />
+          </button>
+        </form>
+      </div>
+      <div class="results">
+        <p><span class="result years" data-val="">--</span> years</p>
+        <p><span class="result months" data-val="">--</span> months</p>
+        <p><span class="result days" data-val="">--</span> days</p>
+      </div>
+    </div>
+  </body>
+  <!-- <footer class="attribution">
+  Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+  Coded by <a href="#">Your Name Here</a>.
+</footer> -->
+</html>

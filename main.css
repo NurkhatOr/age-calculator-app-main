@@ -1,0 +1,162 @@
+/* ### Primary
+
+- Purple: hsl(259, 100%, 65%)
+- Light red: hsl(0, 100%, 67%)
+
+### Neutral
+
+- White: hsl(0, 0%, 100%)
+- Off white: hsl(0, 0%, 94%)
+- Light grey: hsl(0, 0%, 86%)
+- Smokey grey: hsl(0, 1%, 44%)
+- Off black: hsl(0, 0%, 8%) */
+:root {
+  --accent-color: hsl(259, 100%, 65%);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+html {
+  height: 100%;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: hsl(0, 0%, 94%);
+  line-height: 1.5;
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  overflow-x: hidden;
+  transition: all 0.15s ease-in;
+}
+
+img,
+picture,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+p {
+  margin: 0;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+input {
+  padding: 0;
+  margin: 0;
+  border: 0px;
+  accent-color: red;
+}
+
+.container {
+  --max-width: 52.5rem;
+  --padding: 2rem;
+  width: min(var(--max-width), 100% - (var(--padding)));
+  margin-inline: auto;
+  margin-top: 5.5rem;
+  padding: 1.5rem;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 1.5rem;
+  border-bottom-right-radius: 6.5rem;
+}
+
+.form {
+  padding-top: 1.35em;
+  padding-bottom: 1.375rem;
+  overflow: hidden;
+}
+
+fieldset {
+  border: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+
+  label {
+    font-size: 0.8em;
+    letter-spacing: 3px;
+  }
+
+  div {
+    display: flex;
+    flex-direction: column;
+  }
+
+  input {
+    font-size: 1.3em;
+    width: max(50px, 100%);
+    max-width: 10rem;
+    border: 2px solid hsl(0, 0%, 94%);
+    border-radius: 0.5rem;
+    appearance: textfield;
+    margin-top: 0.4rem;
+    padding: 0.5rem 0.7rem;
+  }
+}
+
+button {
+  display: flex;
+  place-content: center;
+  border: none;
+  border-radius: 50%;
+  background-color: var(--accent-color);
+  margin-top: 1rem;
+  margin-inline: auto;
+  padding: 0.5rem;
+  aspect-ratio: 1;
+}
+
+img {
+  max-width: 60%;
+  height: auto;
+}
+
+.results {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-weight: 800;
+  font-style: italic;
+  margin-top: 0.75rem;
+  font-size: 3.5em;
+
+  p {
+    line-height: 1;
+    padding: 0rem;
+  }
+  span {
+    color: var(--accent-color);
+  }
+}
+
+.err-messages {
+  font-size: 0.6em;
+  color: hsl(0, 100%, 67%);
+  line-height: 1;
+  font-weight: 400;
+  font-style: italic;
+  min-height: 20px;
+}
