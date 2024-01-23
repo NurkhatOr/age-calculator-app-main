@@ -128,8 +128,10 @@ function animation() {
     let counter = setInterval(function () {
       startValue += 1;
       valueDisplay.textContent = startValue;
-      if (startValue == endValue) {
+      if (startValue == endValue || endValue == 0) {
         clearInterval(counter);
+        if (endValue == 0) {
+          valueDisplay.textContent = 0;
       }
     }, duration);
   });
