@@ -120,7 +120,6 @@ function animation() {
   let interval = 500;
 
   valueDisplays.forEach((valueDisplay) => {
-    valueDisplay.textContent = 0;
     let startValue = 0;
     let endValue = parseInt(valueDisplay.getAttribute("data-val"));
     let duration = Math.floor(interval / endValue);
