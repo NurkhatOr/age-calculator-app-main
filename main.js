@@ -131,6 +131,7 @@ function animation() {
         clearInterval(counter);
         if (endValue == 0) {
           valueDisplay.textContent = 0;
+        }
       }
     }, duration);
   });
